@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tiago.projetocomponentes.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="Nome:"
+        android:id="@+id/lblNome" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:id="@+id/editNome"
+        android:layout_below="@+id/lblNome"
+        android:layout_alignParentStart="true"
+        android:imeOptions="actionDone"/>
+
+    <CheckBox
+        android:text="Assinar Noticias?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNome"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:id="@+id/checkNews" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkNews"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="46dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/spGeneros"
+        android:entries="@array/opcoes"
+        android:spinnerMode="dialog" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grupoPlano"
+        android:layout_below="@+id/spGeneros"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:text="Plano Mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMensal"
+            android:layout_weight="1"
+            android:layout_below="@+id/rbSemestral" />
+
+        <RadioButton
+    android:text="Plano Semestral"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+            android:id="@+id/rbSemestral"
+    android:layout_weight="1"
+            android:layout_below="@+id/grupoPlano"
+            android:layout_alignParentStart="true" />
+    </RadioGroup>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/ratingApp"
+        android:layout_below="@+id/grupoPlano"
+        android:layout_alignEnd="@+id/spGeneros"
+        android:layout_marginEnd="12dp"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1" />
+
+    <Button
+        android:text="Enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/btEnviar"
+        android:onClick="receberDados"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btEnviar"
+        android:layout_alignStart="@+id/checkNews"
+        android:layout_marginTop="30dp"
+        android:id="@+id/lblDados" />
+
+</RelativeLayout>

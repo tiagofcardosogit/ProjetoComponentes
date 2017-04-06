@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Projeto Componentes</string>
+    <string-array name="opcoes">
+        <item>Rock</item>
+        <item>Sertanojo</item>
+        <item>Funk</item>
+        <item>Pagode</item>
+
+
+    </string-array>
+</resources>
